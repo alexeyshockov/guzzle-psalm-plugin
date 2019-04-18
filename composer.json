@@ -1,0 +1,25 @@
+{
+    "name": "alexeyshockov/guzzle-psalm-plugin",
+    "description": "Guzzle type information for Psalm",
+    "type": "psalm-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexey Shokov",
+            "email": "alexey@shockov.com"
+        }
+    ],
+    "require": {
+        "vimeo/psalm": "^3"
+    },
+    "extra": {
+        "psalm" : {
+            "pluginClass": "AlexS\\Guzzle\\PsalmPlugin"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "AlexS\\Guzzle\\": ["."]
+        }
+    }
+}
