@@ -11,14 +11,14 @@ use SplFileInfo;
 
 class PsalmPlugin implements PluginEntryPointInterface
 {
-    public function __invoke(RegistrationInterface $psalm, SimpleXMLElement $config = null)
+    public function __invoke(RegistrationInterface $registration, ?SimpleXMLElement $config = null): void
     {
         foreach ($this->getStubFiles() as $file) {
-            $psalm->addStubFile($file);
+            $registration->addStubFile($file);
         }
     }
 
-    private function getStubFiles()
+    private function getStubFiles(): \Generator
     {
         /** @var SplFileInfo[] $files */
         $files = new RecursiveIteratorIterator(
