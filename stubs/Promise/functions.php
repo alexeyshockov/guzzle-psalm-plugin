@@ -46,7 +46,7 @@ function iter_for($value) {}
  *
  * @param PromiseInterface<T> $promise
  *
- * @return array{state:string, value:T|\Exception|mixed}
+ * @return array{state:string, value?:T|\Exception|mixed, reason?:string}
  */
 function inspect(PromiseInterface $promise) {}
 
@@ -55,7 +55,7 @@ function inspect(PromiseInterface $promise) {}
  *
  * @param iterable<PromiseInterface<T>> $promises
  *
- * @return array<array{state:string, value:T|\Exception|mixed}>
+ * @return array<array{state:string, value?:T|\Exception|mixed, reason?:string}>
  */
 function inspect_all($promises) {}
 
@@ -108,7 +108,7 @@ function any($promises) {}
  *
  * @param iterable<TKey, PromiseInterface<TValue>> $promises
  *
- * @return PromiseInterface<array<TKey, array{state:string, value:TValue|\Exception|mixed}>>
+ * @return PromiseInterface<array<TKey, array{state:string, value?:TValue|\Exception|mixed, reason?:string}>>
  */
 function settle($promises)
 {
