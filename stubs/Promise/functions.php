@@ -46,7 +46,7 @@ function iter_for($value) {}
  *
  * @param PromiseInterface<T> $promise
  *
- * @return array{state:string, value?:T|\Exception|mixed, reason?:string}
+ * @return array{state: string, value?: T|\Exception|mixed, reason?: string}
  */
 function inspect(PromiseInterface $promise) {}
 

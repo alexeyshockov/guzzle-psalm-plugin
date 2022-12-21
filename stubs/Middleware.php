@@ -8,8 +8,8 @@ use Psr\Log\LoggerInterface;
 use Psr\Log\LogLevel;
 
 /**
- * @psalm-type handler_fn callable(RequestInterface, array):PromiseInterface<ResponseInterface>
- * @psalm-type middleware_fn callable(handler_fn):handler_fn
+ * @psalm-type handler_fn = callable(RequestInterface, array):PromiseInterface<ResponseInterface>
+ * @psalm-type middleware_fn = callable(handler_fn):handler_fn
  */
 final class Middleware
 {

@@ -5,7 +5,7 @@ namespace GuzzleHttp\Promise;
 /**
  * @template T of mixed
  *
- * @psalm-type rejected_fn callable(mixed):(PromiseInterface|mixed)
+ * @psalm-type rejected_fn = callable(mixed):(PromiseInterface|mixed)
  *
  * @see https://github.com/vimeo/psalm/issues/1283
  */
