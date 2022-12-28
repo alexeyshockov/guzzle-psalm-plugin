@@ -8,9 +8,9 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\UriInterface;
 
 /**
- * @psalm-type handler_fn callable(RequestInterface, array):PromiseInterface<ResponseInterface>
+ * @psalm-type handler_fn = callable(RequestInterface, array):PromiseInterface<ResponseInterface>
  *
- * @psalm-type guzzle_client_config=array{handler?:handler_fn,base_uri?:string|UriInterface|null}
+ * @psalm-type guzzle_client_config = array{handler?: handler_fn, base_uri?: string|UriInterface|null, ...}
  */
 class Client implements ClientInterface
 {

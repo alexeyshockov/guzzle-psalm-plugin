@@ -10,14 +10,14 @@ use Psr\Http\Message\ResponseInterface;
 /**
  * @template-implements PromisorInterface<void>
  *
- * @psalm-type pool_config array{
- *  concurrency?:int,
- *  pool_size?:int,
- *  options?:array,
- *  fulfilled?:callable(mixed, mixed, PromiseInterface):void,
- *  rejected?:callable(mixed, mixed, PromiseInterface):void
+ * @psalm-type pool_config = array{
+ *  concurrency?: int,
+ *  pool_size?: int,
+ *  options?: array,
+ *  fulfilled?: callable(mixed, mixed, PromiseInterface):void,
+ *  rejected?: callable(mixed, mixed, PromiseInterface):void
  * }
- * @psalm-type requests_iterable iterable<RequestInterface>|iterable<callable(array):PromiseInterface<ResponseInterface>>
+ * @psalm-type requests_iterable = iterable<RequestInterface>|iterable<callable(array):PromiseInterface<ResponseInterface>>
  */
 class Pool implements PromisorInterface
 {

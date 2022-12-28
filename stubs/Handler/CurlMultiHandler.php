@@ -9,7 +9,7 @@ use Psr\Http\Message\ResponseInterface;
 class CurlMultiHandler
 {
     /**
-     * @param array{handle_factory?:CurlFactoryInterface,select_timeout?:int|float} $options
+     * @param array{handle_factory?: CurlFactoryInterface, select_timeout?: int|float, options?: array} $options
      */
     public function __construct(array $options = []) {}
 

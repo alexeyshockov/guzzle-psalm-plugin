@@ -6,8 +6,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
 /**
- * @psalm-type handler_fn callable(RequestInterface, array):PromiseInterface<ResponseInterface>
- * @psalm-type middleware_fn callable(handler_fn):handler_fn
+ * @psalm-type handler_fn = callable(RequestInterface, array):PromiseInterface<ResponseInterface>
+ * @psalm-type middleware_fn = callable(handler_fn):handler_fn
  */
 class HandlerStack
 {
